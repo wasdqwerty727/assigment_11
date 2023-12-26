@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="270.0" prefWidth="400.0" style="-fx-background-color: #114b5f;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo23.TaskAddWindow">
+<AnchorPane prefHeight="270.0" prefWidth="400.0" style="-fx-background-color: #114b5f;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo23.TaskAddController">
    <children>
       <GridPane layoutX="32.0" layoutY="33.0" prefHeight="169.0" prefWidth="335.0">
         <columnConstraints>
@@ -52,14 +51,14 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ChoiceBox prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ChoiceBox prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="taskNameTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="taskDescriptionTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="taskTypeChoiceBox" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="taskPriorityChoiceBox" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="taskDeadlineDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <Button layoutX="32.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="335.0" style="-fx-background-color: #ffffff;" text="Add to the list" textFill="#114b5f">
+      <Button fx:id="addToTheListButton" layoutX="32.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="335.0" style="-fx-background-color: #ffffff;" text="Add to the list" textFill="#114b5f">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
